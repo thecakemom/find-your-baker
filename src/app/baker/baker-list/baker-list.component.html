@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-xs-12" *ngFor="let profileElement of profile; let i = index">
+    <div class="pull-left">
+      <h3 class="list-group-item-heading">{{ profileElement.name }}</h3>
+      <h5 class="list-group-item-text">{{ profileElement.location }}</h5>
+      <p class="list-group-item-text">{{ profileElement.website }}</p>
+      <p class="list-group-item-text">{{ profileElement.contact }}</p>
+    </div>
+    <div class="float-right">
+      <img
+        src="{{ profileElement.imagePath }}"
+        alt="{{ profileElement.name }}"
+        class="img-responsive rounded"
+        style="max-height: 50px;"
+      />
+    </div>
+    <button
+      class="float-right"
+      style="border: none; font-size: 16px"
+      (click)="onRemoveProfile(i)"
+    >
+      &minus;
+    </button>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <button class="btn btn-success">Create a New Baker Profile</button>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-xs-12" *ngFor="let profilesElement of profile; let i = index"></div>
+    <app-profiles [profile]="profilesElement"></app-profiles>
+<button
+  class="float-right"
+  style="border: none; font-size: 16px"
+  (click)="onRemoveProfiles (i)">
+&minus;
+</button>
+    <div class="pull-left">
+      <h3 class="list-group-item-heading">{{ myProfile.name }}</h3>
+      <h5 class="list-group-item-text">{{ myProfile.location }}</h5>
+      <p class="list-group-item-text">{{ myProfile.website }}</p>
+      <p class="list-group-item-text">{{ myProfile.contact }}</p>
+    </div>
+    <div class="float-right">
+      <img
+        src="{{ myProfile.imagePath }}"
+        alt="{{ myProfile.name }}"
+        class="img-responsive rounded"
+        style="max-height: 50px;"
+      />
+    </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <button class="btn btn-success">Create a New Baker Profile</button>
+  </div>
+</div> -->

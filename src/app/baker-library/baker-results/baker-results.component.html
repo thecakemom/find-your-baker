@@ -1,0 +1,12 @@
+<div class="row mb-3">
+  <div class="col-md-9" *ngFor="let profileEl of allProfiles">
+    <app-baker [book]="bookEl"></app-baker>
+    <button
+      class="float-right"
+      style="border: none; font-size: 16px"
+      (click)="onSaveBook(profileEl)"
+    >
+      &plus;
+    </button>
+  </div>
+</div>
