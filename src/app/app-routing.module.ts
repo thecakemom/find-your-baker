@@ -5,12 +5,12 @@ import { RouterModule, Routes } from "@angular/router";
 import { BakerHomeComponent } from "./baker/baker-home/baker-home.component";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "/baker", pathMatch: "full" },
-  { path: "baker",
+  { path: "", redirectTo: "/baker-home", pathMatch: "full" },
+  { path: "home",
     component: BakerComponent,
     children: [{ path: "", component: BakerHomeComponent}]
   },
-  { path: "baker-library", component: BakerLibraryComponent }
+  { path: "baker-home", component: BakerHomeComponent }
 ];
 
 @NgModule({
